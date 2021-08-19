@@ -1,8 +1,27 @@
+import 'dart:async';
+
 import 'package:airplane/shared/theme.dart';
+import 'package:airplane/ui/pages/get_started_page.dart';
 import 'package:flutter/material.dart';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
+
+  @override
+  _SplashPageState createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    Timer(Duration(seconds: 3), () {
+      Navigator.pushNamed(
+        context,
+        '/get-started',
+      );
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
