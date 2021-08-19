@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:airplane/shared/theme.dart';
-import 'package:airplane/ui/pages/get_started_page.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
