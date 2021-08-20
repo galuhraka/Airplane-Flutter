@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'ui/pages/bonus_page.dart';
+import 'ui/pages/detail_page.dart';
 import 'ui/pages/get_started_page.dart';
 import 'ui/pages/main_page.dart';
 import 'ui/pages/sign_up_page.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/sign-up': (context) => SignUpPage(),
         '/bonus': (context) => BonusPage(),
         '/main': (context) => MainPage(),
+        // '/detail': (context) => DetailPage(),
       },
     );
   }

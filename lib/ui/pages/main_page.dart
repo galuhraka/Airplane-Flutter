@@ -1,5 +1,5 @@
 import 'package:airplane/shared/theme.dart';
-import 'package:airplane/ui/home_page.dart';
+import 'package:airplane/ui/pages/home_page.dart';
 import 'package:airplane/ui/widgets/customBottomNavigation.dart';
 import 'package:flutter/material.dart';
 
