@@ -45,7 +45,10 @@ class SuccessCheckoutPage extends StatelessWidget {
             ),
             CustomButton(
               title: 'My Bookings',
-              onpressed: () {},
+              onpressed: () {
+                Navigator.pushNamedAndRemoveUntil(
+                    context, '/main', (route) => false);
+              },
               width: 220,
               margin: EdgeInsets.only(top: 50),
             ),
