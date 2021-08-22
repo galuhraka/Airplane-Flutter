@@ -1,4 +1,5 @@
 import 'package:airplane/shared/theme.dart';
+import 'package:airplane/ui/pages/succes_checkout_page.dart';
 import 'package:airplane/ui/widgets/booking_details_item.dart';
 import 'package:airplane/ui/widgets/customButton.dart';
 import 'package:flutter/material.dart';
@@ -303,7 +304,12 @@ class CheckoutPage extends StatelessWidget {
     Widget payNowButton() {
       return CustomButton(
         title: 'Pay Now',
-        onpressed: () {},
+        onpressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => SuccessCheckoutPage()),
+          );
+        },
         margin: EdgeInsets.only(top: 30),
       );
     }
