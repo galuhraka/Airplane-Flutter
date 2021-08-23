@@ -131,7 +131,7 @@ class BonusPage extends StatelessWidget {
       return CustomButton(
         title: 'Start Fly Now',
         width: 220,
-        margin: EdgeInsets.only(top: 50),
+        margin: EdgeInsets.only(top: 30),
         onpressed: () {
           Navigator.pushNamedAndRemoveUntil(context, '/main', (route) => false);
         },
