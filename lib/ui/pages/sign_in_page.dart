@@ -8,11 +8,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class SignInPage extends StatelessWidget {
   SignInPage({Key? key}) : super(key: key);
 
-  final TextEditingController nameController = TextEditingController(text: '');
   final TextEditingController emailController = TextEditingController(text: '');
   final TextEditingController passwordController =
       TextEditingController(text: '');
-  final TextEditingController hobbyController = TextEditingController(text: '');
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +52,7 @@ class SignInPage extends StatelessWidget {
           listener: (context, state) {
             if (state is AuthSuccess) {
               Navigator.pushNamedAndRemoveUntil(
-                  context, '/bonus', (route) => false);
+                  context, '/main', (route) => false);
             } else if (state is AuthFailed) {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
@@ -73,11 +71,9 @@ class SignInPage extends StatelessWidget {
             return CustomButton(
               title: 'Sign In',
               onpressed: () {
-                context.read<AuthCubit>().signUp(
+                context.read<AuthCubit>().signIn(
                       email: emailController.text,
                       password: passwordController.text,
-                      name: nameController.text,
-                      hobby: hobbyController.text,
                     );
               },
             );
@@ -108,7 +104,7 @@ class SignInPage extends StatelessWidget {
     Widget signUpButton() {
       return GestureDetector(
         onTap: () {
-          Navigator.pop(context);
+          Navigator.pushNamed(context, '/sign-up');
         },
         child: Container(
           alignment: Alignment.center,

@@ -5,6 +5,8 @@ class UserService {
   CollectionReference _userReference =
       FirebaseFirestore.instance.collection('users');
 
+      
+
   Future<void> setUser(UserModel user) async {
     try {
       _userReference.doc(user.id).set({
