@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:airplane/shared/theme.dart';
 import 'package:airplane/ui/widgets/customButton.dart';
 import 'package:flutter/material.dart';
@@ -135,7 +133,7 @@ class BonusPage extends StatelessWidget {
         width: 220,
         margin: EdgeInsets.only(top: 50),
         onpressed: () {
-          Navigator.pushNamed(context, '/main');
+          Navigator.pushNamedAndRemoveUntil(context, '/main', (route) => false);
         },
       );
     }
