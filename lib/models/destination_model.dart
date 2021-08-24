@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/rendering.dart';
 
 class DestinationModel extends Equatable {
   final String id;
@@ -24,7 +23,7 @@ class DestinationModel extends Equatable {
         name: json['name'],
         city: json['city'],
         imageUrl: json['imageUrl'],
-        rating: json['rating'],
+        rating: json['rating'].toDouble(),
         price: json['price'],
       );
 
