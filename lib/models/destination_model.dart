@@ -7,6 +7,7 @@ class DestinationModel extends Equatable {
   final String imageUrl;
   final double rating;
   final int price;
+  final String description;
 
   DestinationModel({
     required this.id,
@@ -14,7 +15,8 @@ class DestinationModel extends Equatable {
     this.city = '',
     this.imageUrl = '',
     this.rating = 0.0,
-    this.price = 0,
+    required this.price,
+    this.description = '',
   });
 
   factory DestinationModel.fromJson(String id, Map<String, dynamic> json) =>
@@ -25,8 +27,17 @@ class DestinationModel extends Equatable {
         imageUrl: json['imageUrl'],
         rating: json['rating'].toDouble(),
         price: json['price'],
+        description: json['description'],
       );
 
   @override
-  List<Object?> get props => [id, name, city, imageUrl, rating, price];
+  List<Object?> get props => [
+        id,
+        name,
+        city,
+        imageUrl,
+        rating,
+        price,
+        description,
+      ];
 }
